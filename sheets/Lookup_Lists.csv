@@ -1,0 +1,23 @@
+List Name,Value
+Risk Level,Low
+Risk Level,Medium
+Risk Level,High
+Risk Level,Critical
+Status,Open
+Status,In Progress
+Status,Closed
+Priority,P1 - Immediate
+Priority,P2 - High
+Priority,P3 - Medium
+Priority,P4 - Low
+Function,Identify
+Function,Protect
+Function,Detect
+Function,Respond
+Function,Recover
+Maturity Score,0
+Maturity Score,1
+Maturity Score,2
+Maturity Score,3
+Maturity Score,4
+Maturity Score,5
