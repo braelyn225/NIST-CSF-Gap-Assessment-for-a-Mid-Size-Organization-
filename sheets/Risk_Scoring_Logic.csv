@@ -1,0 +1,17 @@
+Type,Level,Definition,Score Range
+Likelihood,1,"Rare – not expected to occur within 3 years",1
+Likelihood,2,"Unlikely – could occur within 2–3 years",2
+Likelihood,3,"Possible – could occur within 1–2 years",3
+Likelihood,4,"Likely – could occur within 6–12 months",4
+Likelihood,5,"Almost Certain – expected within 6 months",5
+Impact,1,"Negligible – minimal operational disruption",1
+Impact,2,"Minor – limited operational disruption",2
+Impact,3,"Moderate – measurable service impact",3
+Impact,4,"Major – significant service impact or regulatory exposure",4
+Impact,5,"Severe – sustained outage, legal/regulatory penalties",5
+Risk Level,Low,"Inherent risk score 1–5",1-5
+Risk Level,Medium,"Inherent risk score 6–11",6-11
+Risk Level,High,"Inherent risk score 12–19",12-19
+Risk Level,Critical,"Inherent risk score 20–25",20-25
+Formula,Inherent Risk Score,"Likelihood × Impact",=Likelihood*Impact
+Formula,Residual Risk Score,"MAX(0, Inherent Risk − Mitigation Effectiveness)",=MAX(0,InherentRisk-Mitigation)
