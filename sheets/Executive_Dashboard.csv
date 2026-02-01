@@ -1,0 +1,26 @@
+Executive Dashboard,
+Metric,Value
+Total Controls,=COUNTA('Gap Assessment Worksheet'!D2:D100)
+Average Current Maturity,=AVERAGE('Gap Assessment Worksheet'!F2:F100)
+Average Target Maturity,=AVERAGE('Gap Assessment Worksheet'!G2:G100)
+Average Gap Score,=AVERAGE('Gap Assessment Worksheet'!H2:H100)
+Compliance Coverage %,=AVERAGE('Gap Assessment Worksheet'!F2:F100)/5
+,
+Function Summary,,,,,
+Function,Count of Controls,Avg Current,Avg Target,Avg Gap,Coverage %
+Identify,=COUNTIF('Gap Assessment Worksheet'!A2:A100,A11),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A11,'Gap Assessment Worksheet'!F2:F100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A11,'Gap Assessment Worksheet'!G2:G100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A11,'Gap Assessment Worksheet'!H2:H100),=C11/5
+Protect,=COUNTIF('Gap Assessment Worksheet'!A2:A100,A12),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A12,'Gap Assessment Worksheet'!F2:F100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A12,'Gap Assessment Worksheet'!G2:G100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A12,'Gap Assessment Worksheet'!H2:H100),=C12/5
+Detect,=COUNTIF('Gap Assessment Worksheet'!A2:A100,A13),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A13,'Gap Assessment Worksheet'!F2:F100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A13,'Gap Assessment Worksheet'!G2:G100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A13,'Gap Assessment Worksheet'!H2:H100),=C13/5
+Respond,=COUNTIF('Gap Assessment Worksheet'!A2:A100,A14),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A14,'Gap Assessment Worksheet'!F2:F100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A14,'Gap Assessment Worksheet'!G2:G100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A14,'Gap Assessment Worksheet'!H2:H100),=C14/5
+Recover,=COUNTIF('Gap Assessment Worksheet'!A2:A100,A15),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A15,'Gap Assessment Worksheet'!F2:F100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A15,'Gap Assessment Worksheet'!G2:G100),=AVERAGEIF('Gap Assessment Worksheet'!A2:A100,A15,'Gap Assessment Worksheet'!H2:H100),=C15/5
+,
+Risk Level Summary,
+Risk Level,Count
+Critical,=COUNTIF('Gap Assessment Worksheet'!L2:L100,A19)
+High,=COUNTIF('Gap Assessment Worksheet'!L2:L100,A20)
+Medium,=COUNTIF('Gap Assessment Worksheet'!L2:L100,A21)
+Low,=COUNTIF('Gap Assessment Worksheet'!L2:L100,A22)
+,
+Top 10 Highest-Risk Gaps (spills),
+Control ID,Inherent Risk Score,Risk Level,Gap Score,Control Description
+=TAKE(SORT(FILTER(CHOOSECOLS('Gap Assessment Worksheet'!D2:L100,1,8,9,5,2),'Gap Assessment Worksheet'!K2:K100<>""),2,FALSE),10)
